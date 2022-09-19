@@ -7,14 +7,19 @@ namespace ShoppingLP3.Controllers;
 
 public class LojaController : Controller
 {
-    private static List<LojaViewModel> lojas = new List<LojaViewModel>();
-    /*private static List<LojaViewModel> lojas = new List<LojaViewModel>{
+    //private static List<LojaViewModel> lojas = new List<LojaViewModel>();
+    private static List<LojaViewModel> lojas = new List<LojaViewModel>{
     new LojaViewModel(32, "piso 3", "Tênis Brasil", "Aqui você encontra os tênis", true, "tenis@email.com"),
     new LojaViewModel(33, "piso 3", "Lembranças Já", "Vem comprar sua lembrança", true, "lemb@email.com"),
     new LojaViewModel(12, "piso 1", "Sorvetinho Gelado", "Sorvetinho Gelado", false, "sorvet@email.com"),
-    };*/
+    };
 
     public IActionResult Gerenciar()
+    {
+        return View(lojas);
+    }
+
+    public IActionResult Lista()
     {
         return View(lojas);
     }
