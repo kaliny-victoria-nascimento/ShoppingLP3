@@ -11,14 +11,14 @@
 @if(Model.Count == 0)
 {
     <p>Nenhuma loja cadastrada</p>
-    <a href="#">Faça agora o cadastro de uma loja</a>
+    <a href="/Loja/Cadastro">Faça agora o cadastro de uma loja</a>
 } else{
     <p>Quantidade de lojas cadastradas: @Model.Count </p>
 
     @foreach(var loja in Model)
     {
         <h5>
-            <a href="/Loja/@loja.Id"> @loja.Nome</a>
+            <a href="/Loja/Detalhe/@loja.Id"> @loja.Nome</a>
         </h5>
         <p>@loja.Descricao</p>
         <hr>
