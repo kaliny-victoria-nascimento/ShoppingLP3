@@ -32,7 +32,14 @@ public class LojaController : Controller
 
     public IActionResult Detalhar(int id)
     {
-        return View(lojas[id-1]);
+        foreach(var loja in lojas)
+        {
+            if(loja.Id == id)
+            {
+               return View(loja);
+            }
+        }
+        return View();
     }
 
     public IActionResult Excluir(int id){
