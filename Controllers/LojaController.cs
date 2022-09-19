@@ -14,7 +14,7 @@ public class LojaController : Controller
     new LojaViewModel(12, "piso 1", "Sorvetinho Gelado", "Sorvetinho Gelado", false, "sorvet@email.com"),
     };
 
-    public IActionResult Index()
+    public IActionResult Index(int id)
     {
         return View();
     }
@@ -30,10 +30,11 @@ public class LojaController : Controller
         return View();
     }
 
-    public IActionResult DescricaoLojas()
+    public IActionResult Detalhar()
     {
         return View();
     }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

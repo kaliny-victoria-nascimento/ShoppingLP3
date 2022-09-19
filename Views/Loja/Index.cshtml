@@ -12,13 +12,11 @@
 {
     <p>Nenhuma loja cadastrada</p>
     <a href="#">Faça agora o cadastro de uma loja</a>
-}
-else{
+} else{
     <p>Quantidade de lojas cadastradas: @Model.Count </p>
 
     @foreach(var loja in Model)
     {
-
         <h5>
             <a href="/Loja/@loja.Id"> @loja.Nome</a>
         </h5>

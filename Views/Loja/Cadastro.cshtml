@@ -1,0 +1,42 @@
+@model ShoppingLP3.ViewModels.LojaViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de lojas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar lojas</h1>
+</div>
+
+<form action="FormData" method="post">
+    <br>
+    <p>Cadastre agora sua loja/kiosque preenchendo as informações neste formulário!</p>
+
+    <div class="input-box">
+        <label for="Id">Insira seu número de identificação: </label>
+        <input type="number" name="Id"/>
+    </div>
+    <div class="input-box">
+        <input type="text" placeholder="Insira o nome da sua loja ou kiosque" minlength="6" maxlength="50" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+    </div>
+    <div class="input-box">
+        <select name="input-box">
+            <option value="piso1" selected>piso 1</option>
+            <option value="piso2">piso 2</option>
+            <option value="piso3">piso 3</option>
+        </select>
+    </div>
+    <div class="input-box">
+        <input type="email" placeholder="Insira seu email"/>
+    </div>
+    <div class="input-box message-box">
+        <textarea placeholder="Descreva sua loja/kiosque"></textarea>
+    </div> 
+    <div class="input-box">
+        <select name="input-box">
+            <option value="opc-loja" selected>Loja</option>
+            <option value="opc-kiosque">Kiosque</option>
+        </select>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
