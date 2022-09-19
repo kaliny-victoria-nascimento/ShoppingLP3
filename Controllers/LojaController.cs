@@ -14,11 +14,6 @@ public class LojaController : Controller
     new LojaViewModel(12, "piso 1", "Sorvetinho Gelado", "Sorvetinho Gelado", false, "sorvet@email.com"),
     };*/
 
-    public IActionResult Index(int id)
-    {
-        return View(lojas);
-    }
-
     public IActionResult Gerenciar()
     {
         return View(lojas);

@@ -16313,11 +16313,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Kalin\\Desktop\\ShoppingLP3\\Views\\Loja\\Index.cshtml",
-      "TargetPath": "Views\\Loja\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Kalin\\Desktop\\ShoppingLP3\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
