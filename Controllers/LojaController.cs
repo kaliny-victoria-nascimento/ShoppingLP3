@@ -16,23 +16,38 @@ public class LojaController : Controller
 
     public IActionResult Index(int id)
     {
-        return View();
+        return View(lojas);
     }
 
     public IActionResult Gerenciar()
     {
-        return View();
+        return View(lojas);
     }
 
     public IActionResult Cadastro([FromForm] int id, [FromForm] string piso, [FromForm] string nome, [FromForm] string descricao, [FromForm] bool lojaKiosq, [FromForm] string email )
     {
         lojas.Add(new LojaViewModel(id, piso, nome, descricao, lojaKiosq, email));
-        return View();
+        return View(lojas);
     }
 
     public IActionResult Detalhar(int id)
     {
         return View(lojas[id-1]);
+    }
+
+    public IActionResult Excluir(int id){
+        
+        if(lojas.Count() == 1) {
+            lojas.Clear();
+        } else {
+            lojas.RemoveAt(id);
+        }
+
+        foreach (var loja in lojas)
+        {
+            loja.Id = lojas.IndexOf(loja);
+        }
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

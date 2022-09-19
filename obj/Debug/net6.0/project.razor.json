@@ -16298,6 +16298,11 @@
   "RootNamespace": "ShoppingLP3",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Kalin\\Desktop\\ShoppingLP3\\Views\\Loja\\Excluir.cshtml",
+      "TargetPath": "Views\\Loja\\Excluir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Kalin\\Desktop\\ShoppingLP3\\Views\\Loja\\Detalhar.cshtml",
       "TargetPath": "Views\\Loja\\Detalhar.cshtml",
       "FileKind": "mvc"
